@@ -1,0 +1,164 @@
+body {
+    font-family: sans-serif;
+    background-color: beige;
+}
+
+.mainIndex {
+    margin: 100px;
+    color: #484747;
+    background-color: rgb(207, 207, 182);
+    padding: 20px;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.p1{
+    animation: 3s ease-out  appear;
+}
+footer {
+    background-color: #716e6e;
+    color: white;
+    font-size: 26px;
+    text-align: center;
+    padding: 20px;
+
+}
+.hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.nolink {
+    text-decoration: none;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #716e6e;
+    padding: 10px 5%;
+    color: white;
+
+}
+nav ul{
+    display: flex;
+    padding: 20px;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 26px;
+    margin-right: 30px;
+}
+
+
+/* BOOKS */
+
+.mainBooks {
+    margin: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.book {
+    border-radius: 20px;
+    background-color: #716e6e;
+    border: 5px solid #716e6e;
+    width: 340px;
+}
+
+.book:hover {
+    box-shadow: 20px 20px 40px #000000;
+
+}
+
+.titelBooks {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+.auteurBooks{
+    color: white;
+    text-align: center;
+}
+.imageBooks {
+    height: 500px;
+    width: 340px;
+}
+
+.tierBooks {
+    color: white;
+    text-align: center;
+}
+
+/* SPECIFIC BOOKS*/
+
+.specificBook {
+    display: flex;
+}
+
+.generalInformation {
+    padding: 50px;
+
+}
+
+.specificImageBook {
+    padding: 50px;
+    height: 600px;
+    width: 380px;
+}
+
+.specificTitelBook{
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.specificAuthorBook {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 80px;
+}
+
+.specificReviewBook{
+    font-size: 18px;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.specificScoreBook {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 100px;
+}
+
+.overview {
+    width: 200px;
+    padding: 15px 40px 15px 40px;
+    background-color: #716e6e;
+    border-radius: 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.overview:hover {
+    box-shadow: 4px 4px 8px black;
+}
+

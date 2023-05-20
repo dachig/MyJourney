@@ -1,0 +1,26 @@
+<%- include('partials/header.ejs') -%>
+
+<main>
+    <h2 class="hidden">Main Content</h2> 
+
+    <section class="specificBook">
+        <h3 class="hidden"><%= specificBook.title %></h3>
+        <img class="specificImageBook" src="<%= specificBook.image %>" alt="book">
+        <section class="generalInformation">
+            <h4 class="hidden">Book information</h4>
+                <p class="specificTitelBook"><%= specificBook.title %></p>
+                <p class="specificAuthorBook">By <%= specificBook.author %>, published in <%= specificBook.published %>  (<%= specificBook.pages %> pages)</p>
+                <% if(specificBook.tier == "TBD"){ %>
+                    <p class="specificReviewBook"><i>Review loading...</i></p>
+                    <p class="specificScoreBook">The tier of this book is yet to be determined.</p>
+                <% } else { %>
+                    <p class="specificReviewBook"><%= specificBook.review %></p>
+                    <p class="specificScoreBook">This book is <%= specificBook.tier %> tier.</p>
+                <% } %>
+                    <a class="overview" href="/books">Back to the overview</a>
+        </section>
+    </section>
+
+</main>
+
+<%- include('partials/footer.ejs') -%>

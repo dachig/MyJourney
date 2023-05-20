@@ -1,0 +1,18 @@
+<%- include('partials/header.ejs') -%>
+
+    <main class="mainBooks">
+        <h2 class="hidden">Main Content</h2>
+<% for(let i = 0; i < books.length; i++){ %>
+    <a class="nolink" href="books/<%= books[i].title %>">
+        <section class="book">
+        <h3 class="hidden"><%= books[i].title %></h3>
+        <p class="titelBooks"><%= books[i].title %></p>
+        <p class="auteurBooks">By <%= books[i].author %> (<%= books[i].published %>)</p>
+        <img class="imageBooks" src="<%= books[i].image %>" alt="book">
+        <p class="tierBooks">Status: <% if (books[i].tier == "TBD"){ %> <i>Currently reading...</i> <% } else { %> <i>Read &#10003;</i> <% } %></p>
+    </section></a>
+
+    <%  }  %>
+</main>
+
+<%- include('partials/footer.ejs') -%>
