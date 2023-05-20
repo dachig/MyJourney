@@ -10,3 +10,6 @@ I also believe that sharing my real-life achievements can serve as inspiration f
 Lastly, I'll be documenting my own self-improvement journey on this website. I believe that growth is a continuous process, and by sharing my experiences and insights, I hope to motivate you to embark on your own journey of self-discovery and improvement.
 
 Thank you for visiting my website, and I hope you find it inspiring and informative.
+
+Quotes API:
+https://docs.zenquotes.io/zenquotes-documentation/#call-author

@@ -3,12 +3,27 @@ body {
     background-color: beige;
 }
 
-.mainIndex {
+.introduction{
     margin: 100px;
     color: #484747;
     background-color: rgb(207, 207, 182);
     padding: 20px;
 }
+
+.quote {
+    text-align: center;
+}
+
+.quote a {
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: black;
+}
+.quote a:hover{
+    color: blue;
+    text-decoration: underline;
+}
+
 
 @keyframes appear {
     0% {

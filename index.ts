@@ -18,11 +18,21 @@ import { ObjectId } from "mongodb";
 
 let dateYearNow = new Date().getFullYear();
 
-app.get('/', (req: any, res: any) => {
-    res.render("index",{dateYearNow});
+function getRandomInt(max: any) {
+    return Math.floor(Math.random() * max);
+}
+
+const api_url = "https://zenquotes.io/api/quotes/";
+app.get('/', async (req: any, res: any) => {
+
+        const response = await fetch(api_url);
+        var data = await response.json();
+        let quote = data[getRandomInt(data.length)]    
+
+        res.render("index", { dateYearNow, quote });
 });
 interface Book {
-    _id:ObjectId,
+    _id: ObjectId,
     title: string,
     author: string,
     published: string,
@@ -36,13 +46,13 @@ app.get('/books', async (req: any, res: any) => {
     try {
         await client.connect();
         let books = await client.db('MyJourney').collection('books').find({}).toArray();
-        
+
         //await client.db('MyJourney').collection('books').insertOne({title: "Mans Search For Meaning", 
         //author:"Viktor E. Frankl & Simon Vance", published: "2021",
         //pages : 240, image:"https://media.s-bol.com/JY5ym4lEGvPo/wjA1x9z/533x840.jpg",
         //review:"TBD",tier:"TBD"});
 
-        res.render('books',{books,dateYearNow})
+        res.render('books', { books, dateYearNow })
     } catch (e) {
         console.error(e)
     } finally {
@@ -50,14 +60,14 @@ app.get('/books', async (req: any, res: any) => {
     }
 
 });
-app.get('/books/:index', async(req: any, res: any) => {
+app.get('/books/:index', async (req: any, res: any) => {
     try {
         await client.connect();
 
         let index: string = req.params.index;
 
         let specificBook = await client.db('MyJourney').collection('books').findOne({ title: index });
-        res.render("specific_book", { specificBook, index,dateYearNow })
+        res.render("specific_book", { specificBook, index, dateYearNow })
 
     } catch (e) {
         console.error(e)
