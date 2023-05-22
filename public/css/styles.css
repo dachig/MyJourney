@@ -1,27 +1,44 @@
 body {
-    font-family: sans-serif;
-    background-color: beige;
+    font-family:Arial, calibri;
+    background-color: rgb(244, 249, 255);
 }
 
-.introduction{
+.mainIndex {
+    display: flex;
     margin: 100px;
-    color: #484747;
-    background-color: rgb(207, 207, 182);
+    gap: 100px;
+}
+.mainIndex h3 {
+    font-size: 1.5rem;
+}
+
+.introduction {
+    border-radius: 20px;
+    border: solid 10px lightblue;
     padding: 20px;
 }
 
 .quote {
     text-align: center;
-}
+    border-radius: 20px;
+    border: solid 10px lightblue;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
 
+}
+.quote h3{
+    min-width: 240px;
+
+}
 .quote a {
     font-size: 1.25rem;
     text-decoration: none;
     color: black;
 }
-.quote a:hover{
-    color: blue;
-    text-decoration: underline;
+
+.quote a:hover {
+    border-bottom: solid 2px #000000;
 }
 
 
@@ -29,21 +46,23 @@ body {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
 }
-.p1{
-    animation: 3s ease-out  appear;
+
+.p1 {
+    animation: 3s ease-out appear;
 }
+
 footer {
-    background-color: #716e6e;
-    color: white;
     font-size: 26px;
     text-align: center;
-    padding: 20px;
-
+    padding: 1px;
+    border-top: 1px solid lightblue;
 }
+
 .hidden {
     position: absolute;
     width: 1px;
@@ -58,68 +77,94 @@ footer {
 .nolink {
     text-decoration: none;
 }
-header{
+
+header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #716e6e;
-    padding: 10px 5%;
-    color: white;
-
+    padding: 0px 5%;
+    border-bottom: 1px solid lightblue;
 }
-nav ul{
+
+nav ul {
     display: flex;
-    padding: 20px;
     list-style: none;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: white;
     font-size: 26px;
     margin-right: 30px;
+    color: black;
 }
-
+nav ul li a:hover {
+    border-bottom: solid 2px #000000;
+}
 
 /* BOOKS */
 
-.mainBooks {
+.selfDBooks {
     margin: 100px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     gap: 20px;
+}
+
+.selfDBooks h3 {
+    position: absolute;
+    top: 110px;
 }
 
 .book {
     border-radius: 20px;
-    background-color: #716e6e;
-    border: 5px solid #716e6e;
-    width: 340px;
+    background-color: lightblue;
+    border: 5px solid lightblue;
+    width: 200px;
+    height: 525px;
+    display: flex;
+    flex-direction: column;
+    
+    position: relative; /*MOVE UP HOVER*/
 }
 
+.childrenBook:nth-child(4) {
+    margin-top: auto;
+}
+@keyframes top {
+    0% {
+        top: 0px;
+    }
+
+    100% {
+        top: -10px;
+    }
+}
 .book:hover {
-    box-shadow: 20px 20px 40px #000000;
+    box-shadow: 10px 10px 20px darkcyan;
+    top: -10px; /*MOVE UP HOVER*/
 
 }
 
 .titelBooks {
-    color: white;
+    color: black;
     text-align: center;
     font-weight: bold;
     font-size: 20px;
 }
-.auteurBooks{
-    color: white;
+
+.auteurBooks {
+    color: black;
     text-align: center;
 }
+
 .imageBooks {
-    height: 500px;
-    width: 340px;
+    height: 300px;
+    width: 200px;
 }
 
 .tierBooks {
-    color: white;
+    color: black;
     text-align: center;
 }
 
@@ -140,18 +185,19 @@ nav ul li a {
     width: 380px;
 }
 
-.specificTitelBook{
+.specificTitelBook {
     font-size: 40px;
     font-weight: bold;
     margin-bottom: 20px;
 }
+
 .specificAuthorBook {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 80px;
 }
 
-.specificReviewBook{
+.specificReviewBook {
     font-size: 18px;
     width: 80%;
     margin-bottom: 20px;
@@ -166,14 +212,13 @@ nav ul li a {
 .overview {
     width: 200px;
     padding: 15px 40px 15px 40px;
-    background-color: #716e6e;
+    background-color: lightblue;
     border-radius: 15px;
     text-decoration: none;
-    color: white;
+    color: black;
     font-weight: bold;
 }
 
 .overview:hover {
-    box-shadow: 4px 4px 8px black;
+    box-shadow: 4px 4px 8px darkcyan;
 }
-

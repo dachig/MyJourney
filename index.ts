@@ -14,6 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 const { MongoClient } = require('mongodb');
 const uri: string = "mongodb+srv://dachig:incorrect99!@cluster0.dyauo8e.mongodb.net/?retryWrites=true&w=majority"
 const client = new MongoClient(uri, { useUnifiedTopology: true });
+import { count } from "console";
 import { ObjectId } from "mongodb";
 
 let dateYearNow = new Date().getFullYear();
@@ -27,9 +28,10 @@ app.get('/', async (req: any, res: any) => {
 
         const response = await fetch(api_url);
         var data = await response.json();
-        let quote = data[getRandomInt(data.length)]    
+        let quote1 = data[getRandomInt(data.length)];   
+        let quote2 = data[getRandomInt(data.length)];    
 
-        res.render("index", { dateYearNow, quote });
+        res.render("index", { dateYearNow, quote1, quote2 });
 });
 interface Book {
     _id: ObjectId,
