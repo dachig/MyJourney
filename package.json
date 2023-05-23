@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/dachig/MyJourney#readme",
   "devDependencies": {
+    "@types/jquery": "^3.5.16",
     "@types/node": "^20.1.4",
     "nodemo": "^1.0.0",
     "nodemon": "^2.0.22",

@@ -1,0 +1,69 @@
+<%- include('partials/header.ejs') -%>
+
+    <section class="cars">
+        <section class="Os">
+            <p class="O">O</p>
+            <p class="O">O</p>
+            <p class="O">O</p>
+            <p class="O">O</p>
+        </section>
+        <h2>AI Generated Audi Sports Cars</h2>
+        <section class="carIDLinks">
+            <h3 class="hidden">Car Links</h3>
+            <p><a id="blackLink" href="#black" style="color: black" :hover{color:lightblue}>black</a></p>
+            <style>
+                #blackLink:hover {
+                    border-bottom: solid 2px black;
+                }
+            </style>
+            <p><a id="pinkLink" href="#pink" style="color: pink">pink</a></p>
+            <style>
+                #pinkLink:hover {
+                    border-bottom: solid 2px pink;
+                }
+            </style>
+            <p><a id="redLink" href="#red" style="color: red">red</a></p>
+            <style>
+                #redLink:hover {
+                    border-bottom: solid 2px red;
+                }
+            </style>
+            <p><a id="yellowLink" href="#yellow" style="color: rgb(210, 210, 42)">yellow</a></p>
+            <style>
+                #yellowLink:hover {
+                    border-bottom: solid 2px rgb(210, 210, 42);
+                }
+            </style>
+            <p><a id="greenLink" href="#green" style="color: green">green</a></p>
+            <style>
+                #greenLink:hover {
+                    border-bottom: solid 2px green;
+                }
+            </style>
+            <p><a id="salmonLink" href="#salmon" style="color: salmon">salmon</a></p>
+            <style>
+                #salmonLink:hover {
+                    border-bottom: solid 2px salmon;
+                }
+            </style>
+            <p><a id="brownLink" href="#brown" style="color: rgb(134, 43, 43)">brown</a></p>
+            <style>
+                #brownLink:hover {
+                    border-bottom: solid 2px rgb(134, 43, 43);
+                }
+            </style>
+        </section>
+    </section>
+    <section class="carpics">
+        <img src="media/2black.jpg" alt="black" id="black">
+        <img src="media/2pink.jpg" alt="pink" id="pink">
+        <img src="media/2red.jpg" alt="red" id="red">
+        <img src="media/2yellow.jpg" alt="yellow" id="yellow">
+        <img src="media/2green.jpg" alt="green" id="green">
+        <img src="media/2salmon.jpg" alt="salmon" id="salmon">
+        <img src="media/2brown.jpg" alt="brown" id="brown">
+    </section>
+    <p class="topCenter"><a class="top" href="#top">Back to top</a></p>
+
+
+    <%- include('partials/footer.ejs') -%>

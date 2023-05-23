@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap%27');
+
 body {
-    font-family:Arial, calibri;
+    font-family: Arial, calibri;
     background-color: rgb(244, 249, 255);
 }
 
@@ -8,6 +10,7 @@ body {
     margin: 100px;
     gap: 100px;
 }
+
 .mainIndex h3 {
     font-size: 1.5rem;
 }
@@ -25,12 +28,17 @@ body {
     padding: 20px;
     display: flex;
     flex-direction: column;
+    max-height: 410px;
+    max-width: 300px;
 
 }
-.quote h3{
+
+.quote h3 {
     min-width: 240px;
+    margin-bottom: 40px;
 
 }
+
 .quote a {
     font-size: 1.25rem;
     text-decoration: none;
@@ -39,21 +47,6 @@ body {
 
 .quote a:hover {
     border-bottom: solid 2px #000000;
-}
-
-
-@keyframes appear {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-.p1 {
-    animation: 3s ease-out appear;
 }
 
 footer {
@@ -97,8 +90,13 @@ nav ul li a {
     margin-right: 30px;
     color: black;
 }
+
 nav ul li a:hover {
     border-bottom: solid 2px #000000;
+}
+
+nav ul li a:visited {
+    background-color: lightblue;
 }
 
 /* BOOKS */
@@ -124,13 +122,15 @@ nav ul li a:hover {
     height: 525px;
     display: flex;
     flex-direction: column;
-    
-    position: relative; /*MOVE UP HOVER*/
+
+    position: relative;
+    /*MOVE UP HOVER*/
 }
 
 .childrenBook:nth-child(4) {
     margin-top: auto;
 }
+
 @keyframes top {
     0% {
         top: 0px;
@@ -140,9 +140,11 @@ nav ul li a:hover {
         top: -10px;
     }
 }
+
 .book:hover {
-    box-shadow: 10px 10px 20px darkcyan;
-    top: -10px; /*MOVE UP HOVER*/
+    box-shadow: 10px 10px 20px rgb(157, 225, 255);
+    top: -10px;
+    /*MOVE UP HOVER*/
 
 }
 
@@ -180,7 +182,7 @@ nav ul li a:hover {
 }
 
 .specificImageBook {
-    padding: 50px;
+    margin: 50px;
     height: 600px;
     width: 380px;
 }
@@ -221,4 +223,74 @@ nav ul li a:hover {
 
 .overview:hover {
     box-shadow: 4px 4px 8px darkcyan;
+}
+
+/* CARS */
+
+.cars {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+}
+.Os {
+    display: flex;
+    justify-content: center;
+    font-size: 15rem;
+    margin-bottom: -300px;
+    font-family: "Montserrat", sans-serif;
+    color: #BCC6CC;
+}
+
+.O:first-child{
+    transform: translateX(75%)
+}
+.O:nth-child(2){
+    transform: translateX(25%)
+}
+.O:nth-child(3){
+    transform: translateX(-25%)
+}
+.O:nth-child(4){
+    transform: translateX(-75%)
+}
+
+.cars h2 {
+    font-size: 2rem;
+
+}
+
+.carIDLinks {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 360px;
+
+}
+
+.cars a {
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    
+}
+.carpics {
+    display: flex;
+    flex-direction: column;
+}
+.carpics img {
+    width: 98vw;
+}
+.topCenter {
+    text-align: center;
+
+}
+.top {
+    text-decoration: none;
+    font-size: 2rem;
+    color: black;
+}
+.top:hover {
+    border-bottom: solid 2px black;
 }

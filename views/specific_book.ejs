@@ -5,7 +5,12 @@
 
     <section class="specificBook">
         <h3 class="hidden"><%= specificBook.title %></h3>
-        <img class="specificImageBook" src="<%= specificBook.image %>" alt="book">
+        <% if(specificBook.wiki != ""){ %>
+            <a target="_blank" href="<%= specificBook.wiki %>">
+                <% } %>
+                <img class="specificImageBook" src="<%= specificBook.image %>" alt="book">
+            </a>
+            
         <section class="generalInformation">
             <h4 class="hidden">Book information</h4>
                 <p class="specificTitelBook"><%= specificBook.title %></p>

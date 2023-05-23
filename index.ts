@@ -78,6 +78,17 @@ app.get('/books/:index', async (req: any, res: any) => {
     }
 });
 
+app.get('/personal_projects',(req:any,res:any)=>{
+    res.render('personal_projects',{dateYearNow});
+});
+
+app.get('/real_life',(req:any,res:any)=>{
+    res.render('real_life',{dateYearNow});
+});
+
+app.get('/cars',(req:any,res:any)=>{
+    res.render('cars',{dateYearNow});
+});
 
 app.listen(app.get("port"), async () => {
     console.log(`The application has started on: http://localhost:${app.get("port")}`);
