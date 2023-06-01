@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap%27');
-
+html{
+    scroll-behavior: smooth;
+}
 body {
     font-family: Arial, calibri;
     background-color: rgb(244, 249, 255);
@@ -231,42 +233,24 @@ nav ul li a:visited {
     justify-content: center;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 91vh;
     text-align: center;
 }
-.Os {
-    display: flex;
-    justify-content: center;
-    font-size: 15rem;
-    margin-bottom: -300px;
-    font-family: "Montserrat", sans-serif;
-    color: #BCC6CC;
+.cars img{
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
 }
-
-.O:first-child{
-    transform: translateX(75%)
-}
-.O:nth-child(2){
-    transform: translateX(25%)
-}
-.O:nth-child(3){
-    transform: translateX(-25%)
-}
-.O:nth-child(4){
-    transform: translateX(-75%)
-}
-
 .cars h2 {
     font-size: 2rem;
-
+    color: white;
 }
 
 .carIDLinks {
     display: flex;
     justify-content: center;
     gap: 20px;
-    margin-bottom: 360px;
-
 }
 
 .cars a {
@@ -280,7 +264,9 @@ nav ul li a:visited {
     flex-direction: column;
 }
 .carpics img {
-    width: 98vw;
+    width: 85vw;
+    margin-left: auto;
+    margin-right: auto;
 }
 .topCenter {
     text-align: center;
@@ -294,3 +280,37 @@ nav ul li a:visited {
 .top:hover {
     border-bottom: solid 2px black;
 }
+/*animation*/
+
+.invisible {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 3s;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateX(0%);
+
+}
+
+/* video*/
+#r8{
+    position: absolute;
+    width: 98vw;
+    height: 90vh;
+    z-index: -100;
+    
+}
+#pausePlay {
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background: #242424;
+    color: #fff;
+    cursor: pointer;
+  }

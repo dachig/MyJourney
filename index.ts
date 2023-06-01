@@ -3,6 +3,7 @@ const express = require('express');
 const f = require('fetch');
 const ejs = require('ejs');
 const app = express();
+const jquery = require('jquery');
 
 app.use(express.static('public'));
 app.set("view engine", "ejs");
@@ -85,8 +86,10 @@ app.get('/personal_projects',(req:any,res:any)=>{
 app.get('/real_life',(req:any,res:any)=>{
     res.render('real_life',{dateYearNow});
 });
+    
 
 app.get('/cars',(req:any,res:any)=>{
+    
     res.render('cars',{dateYearNow});
 });
 

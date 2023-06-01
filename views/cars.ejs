@@ -1,19 +1,22 @@
 <%- include('partials/header.ejs') -%>
 
+    <video autoplay loop id="r8">
+        <source src="media/R8SHOWCASE.mp4" type="video/mp4">
+        
+        Your browser does not support the audio element.
+    </video>
+
     <section class="cars">
-        <section class="Os">
-            <p class="O">O</p>
-            <p class="O">O</p>
-            <p class="O">O</p>
-            <p class="O">O</p>
-        </section>
+        
+        <img src="media/logoAudi.png" alt="logoAudi">
+
         <h2>AI Generated Audi Sports Cars</h2>
         <section class="carIDLinks">
             <h3 class="hidden">Car Links</h3>
-            <p><a id="blackLink" href="#black" style="color: black" :hover{color:lightblue}>black</a></p>
+            <p><a id="blackLink" href="#black" style="color: rgb(255, 255, 255)" :hover{color:lightblue}>black</a></p>
             <style>
                 #blackLink:hover {
-                    border-bottom: solid 2px black;
+                    border-bottom: solid 2px rgb(255, 255, 255);
                 }
             </style>
             <p><a id="pinkLink" href="#pink" style="color: pink">pink</a></p>
@@ -53,17 +56,21 @@
                 }
             </style>
         </section>
+        <button id="pausePlay" onclick="pausePlay()">Pause</button>
+
     </section>
+
+
     <section class="carpics">
-        <img src="media/2black.jpg" alt="black" id="black">
-        <img src="media/2pink.jpg" alt="pink" id="pink">
-        <img src="media/2red.jpg" alt="red" id="red">
-        <img src="media/2yellow.jpg" alt="yellow" id="yellow">
-        <img src="media/2green.jpg" alt="green" id="green">
-        <img src="media/2salmon.jpg" alt="salmon" id="salmon">
-        <img src="media/2brown.jpg" alt="brown" id="brown">
+        <img class="invisible" src="media/2black.jpg" alt="black" id="black">
+        <img class="invisible" src="media/2pink.jpg" alt="pink" id="pink">
+        <img class="invisible" src="media/2red.jpg" alt="red" id="red">
+        <img class="invisible" src="media/2yellow.jpg" alt="yellow" id="yellow">
+        <img class="invisible" src="media/2green.jpg" alt="green" id="green">
+        <img class="invisible" src="media/2salmon.jpg" alt="salmon" id="salmon">
+        <img class="invisible" src="media/2brown.jpg" alt="brown" id="brown">
     </section>
     <p class="topCenter"><a class="top" href="#top">Back to top</a></p>
 
-
+    <script src="/js/scroll.js"></script>
     <%- include('partials/footer.ejs') -%>
